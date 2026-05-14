@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "lualine.nvim": {
+      "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "nvim-web-devicons": {
+      "rev": "2795c26c916bb3c57dde308b82be51971fa92747",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "space-vim-dark": {
+      "rev": "0ab698bd2a3959e3bed7691ac55ba4d8abefd143",
+      "src": "https://github.com/liuchengxu/space-vim-dark.git"
+    },
+    "vim-visual-multi": {
+      "rev": "a6975e7c1ee157615bbc80fc25e4392f71c344d4",
+      "src": "https://github.com/mg979/vim-visual-multi.git"
+    }
+  }
+}
