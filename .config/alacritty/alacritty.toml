@@ -1,0 +1,11 @@
+[font]
+size = 14.0
+
+[font.normal]
+family = "monospace"
+
+[general]
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
