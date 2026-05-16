@@ -6,3 +6,9 @@ vim.pack.add({
 
 require("plugins.lualine")
 
+-- vim visual multi keybinds
+vim.g.VM_maps = {
+    ["Add Cursor Down"] = "<C-j>",
+    ["Add Cursor Up"] = "<C-k>",
+}
+
