@@ -2,7 +2,8 @@
 size = 14.0
 
 [font.normal]
-family = "monospace"
+# family = "monospace"
+family = "DroidSansM Nerd Font Mono" # need to install the font first
 
 [general]
 import = [
