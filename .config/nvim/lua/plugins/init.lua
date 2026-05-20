@@ -1,10 +1,12 @@
 vim.pack.add({
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/nvim-lualine/lualine.nvim',
-    'https://github.com/mg979/vim-visual-multi.git'
+    'https://github.com/mg979/vim-visual-multi.git',
+    'https://github.com/mason-org/mason.nvim.git'
 })
 
 require("plugins.lualine")
+require("plugins.mason")
 
 -- vim visual multi keybinds
 vim.g.VM_maps = {
