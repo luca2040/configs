@@ -18,13 +18,13 @@ vim.keymap.set("n", "<leader>j", "<C-w>j")
 
 vim.keymap.set("n", "<leader>H", "<cmd>vertical resize -5<CR>")
 vim.keymap.set("n", "<leader>L", "<cmd>vertical resize +5<CR>")
-vim.keymap.set("n", "<leader>K", "<cmd>resize +5<CR>")
-vim.keymap.set("n", "<leader>J", "<cmd>resize -5<CR>")
+vim.keymap.set("n", "<leader>K", "<cmd>resize -5<CR>")
+vim.keymap.set("n", "<leader>J", "<cmd>resize +5<CR>")
 
 vim.keymap.set("n", "<leader><S-Left>",  "<cmd>vertical resize -5<CR>")
 vim.keymap.set("n", "<leader><S-Right>", "<cmd>vertical resize +5<CR>")
-vim.keymap.set("n", "<leader><S-Up>",    "<cmd>resize +5<CR>")
-vim.keymap.set("n", "<leader><S-Down>",  "<cmd>resize -5<CR>")
+vim.keymap.set("n", "<leader><S-Up>",    "<cmd>resize -5<CR>")
+vim.keymap.set("n", "<leader><S-Down>",  "<cmd>resize +5<CR>")
 
 require("config.explrfile")
 

@@ -2,11 +2,22 @@ vim.pack.add({
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/nvim-lualine/lualine.nvim',
     'https://github.com/mg979/vim-visual-multi.git',
-    'https://github.com/mason-org/mason.nvim.git'
+    'https://github.com/mason-org/mason.nvim.git',
+
+    'https://github.com/hrsh7th/cmp-nvim-lsp.git',
+    'https://github.com/hrsh7th/cmp-buffer.git',
+    'https://github.com/hrsh7th/cmp-path.git',
+    'https://github.com/hrsh7th/cmp-cmdline.git',
+    'https://github.com/hrsh7th/nvim-cmp.git',
+
+    'https://github.com/hrsh7th/cmp-vsnip.git',
+    'https://github.com/hrsh7th/vim-vsnip.git'
 })
 
 require("plugins.lualine")
 require("plugins.mason")
+require("plugins.nvimcmp")
+require("plugins.vimlspconfig")
 
 -- vim visual multi keybinds
 vim.g.VM_maps = {
