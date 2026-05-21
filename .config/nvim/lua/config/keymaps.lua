@@ -26,5 +26,12 @@ vim.keymap.set("n", "<leader><S-Right>", "<cmd>vertical resize +5<CR>")
 vim.keymap.set("n", "<leader><S-Up>",    "<cmd>resize -5<CR>")
 vim.keymap.set("n", "<leader><S-Down>",  "<cmd>resize +5<CR>")
 
+-- lsp stuff
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+vim.keymap.set("n", "<C-A-l>", vim.lsp.buf.format)
+vim.keymap.set("n", "<C-s>", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<C-a>", vim.diagnostic.goto_prev)
+
 require("config.explrfile")
 
