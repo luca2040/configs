@@ -32,6 +32,7 @@ vim.keymap.set("n", "gl", vim.diagnostic.open_float)
 vim.keymap.set("n", "<C-A-l>", vim.lsp.buf.format)
 vim.keymap.set("n", "<C-s>", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<C-a>", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<C-p>", vim.lsp.buf.code_action)
 
 require("config.explrfile")
 
