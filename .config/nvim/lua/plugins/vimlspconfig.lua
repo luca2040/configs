@@ -7,7 +7,7 @@ local lsps = {
         "clangd",
         {
             cmd = { "clangd" },
-            filetypes = { "c", "cpp" },
+            filetypes = { "c", "cpp", "h", "hpp"},
             root_markers = { ".git", "compile_commands.json" },
         },
         capabilities = capabilities
