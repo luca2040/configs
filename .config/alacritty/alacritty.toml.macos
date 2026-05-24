@@ -1,0 +1,28 @@
+[font]
+size = 18.0
+
+[font.normal]
+# family = "monospace"
+family = "DroidSansM Nerd Font Mono" # need to install the font first
+
+[general]
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
+[window]
+option_as_alt = "Both"
+
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "F16", chars = "€" },
+  { key = "F14", chars = "[" },
+  { key = "F15", chars = "]" },
+  { key = "F14", mods = "Shift", chars = "{" },
+  { key = "F15", mods = "Shift", chars = "}" },
+  { key = "F17", chars = "@" },
+  { key = "F18", chars = "#" },
+]
+

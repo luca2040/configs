@@ -1,12 +1,1 @@
-[font]
-size = 14.0
-
-[font.normal]
-# family = "monospace"
-family = "DroidSansM Nerd Font Mono" # need to install the font first
-
-[general]
-import = [
-    "~/.config/alacritty/theme.toml"
-]
-
+alacritty.toml.macos
