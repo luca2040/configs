@@ -1,0 +1,5 @@
+alias vi='nvim'
+alias lzg='lazygit'
+alias tmuxa='tmux attach -t'
+alias cd..='cd ..'
+
