@@ -3,3 +3,5 @@ alias lzg='lazygit'
 alias tmuxa='tmux attach -t'
 alias cd..='cd ..'
 
+export PATH="$HOME/.config/autocfg:$PATH"
+

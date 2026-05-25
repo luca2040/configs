@@ -1,0 +1,65 @@
+#!/bin/sh
+
+RUN_DIR="$(pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+AUTORUN=1
+
+if [ -z "$1" ]; then
+    echo "usage: <this command> <language> [?norun]" >&2
+    exit 1
+fi
+
+LANG="$1"
+shift
+
+for arg in "$@"; do
+    case "$arg" in
+        norun)
+            AUTORUN=0
+            ;;
+        *)
+            echo "unknown option '$arg'" >&2
+    esac
+done
+
+FOUND=0
+FOUND_FOLDER=""
+for folder in "$SCRIPT_DIR"/*; do
+    [ -d "$folder" ] || continue
+    THIS_NAME="$(basename "$folder")"
+
+    if [ "$THIS_NAME" = "$LANG" ]; then
+        FOUND=1
+        FOUND_FOLDER="$folder"
+        break
+    fi
+done
+
+if [ "$FOUND" -eq 0 ]; then
+    echo "language '$LANG' not found" >&2
+    exit 1
+fi
+
+CFG_FILE="autocfg.txt"
+
+mkdir -p "$RUN_DIR"
+cd "$FOUND_FOLDER" || exit 1
+
+find . -type f ! -name "$CFG_FILE" | while IFS= read -r file; do
+    mkdir -p "$RUN_DIR/$(dirname "$file")"
+    cp "$file" "$RUN_DIR/$file"
+done
+
+if [ "$AUTORUN" -eq 1 ]; then
+    CFG_FILE="$FOUND_FOLDER/$CFG_FILE"
+    cd "$RUN_DIR" || exit 1
+
+    if [ -e "$CFG_FILE" ]; then
+        echo "running configure command"
+        source "$CFG_FILE"
+    fi
+fi
+
+echo "configured for language '$LANG'" >&2
+
