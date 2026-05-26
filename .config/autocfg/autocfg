@@ -4,9 +4,10 @@ RUN_DIR="$(pwd)"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 AUTORUN=1
+REPLACE=0
 
 if [ -z "$1" ]; then
-    echo "usage: <this command> <language> [?norun]" >&2
+    echo "usage: <this command> <language> [?norun] [?replace]" >&2
     exit 1
 fi
 
@@ -17,6 +18,9 @@ for arg in "$@"; do
     case "$arg" in
         norun)
             AUTORUN=0
+            ;;
+        replace)
+            REPLACE=1
             ;;
         *)
             echo "unknown option '$arg'" >&2
@@ -47,8 +51,21 @@ mkdir -p "$RUN_DIR"
 cd "$FOUND_FOLDER" || exit 1
 
 find . -type f ! -name "$CFG_FILE" | while IFS= read -r file; do
-    mkdir -p "$RUN_DIR/$(dirname "$file")"
-    cp "$file" "$RUN_DIR/$file"
+    TARGET="$RUN_DIR/$file"
+
+    if [ -e "$TARGET" ]; then
+        if [ "$REPLACE" -eq 1 ]; then
+            echo "replacing file '$TARGET'" >&2
+
+            mkdir -p "$RUN_DIR/$(dirname "$file")"
+            cp "$file" "$RUN_DIR/$file"
+        else
+            echo "skipping file '$TARGET'" >&2
+        fi
+    else
+        mkdir -p "$RUN_DIR/$(dirname "$file")"
+        cp "$file" "$RUN_DIR/$file"
+    fi
 done
 
 if [ "$AUTORUN" -eq 1 ]; then
