@@ -11,13 +11,17 @@ vim.pack.add({
     'https://github.com/hrsh7th/nvim-cmp.git',
 
     'https://github.com/hrsh7th/cmp-vsnip.git',
-    'https://github.com/hrsh7th/vim-vsnip.git'
+    'https://github.com/hrsh7th/vim-vsnip.git',
+
+    'https://github.com/nvim-lua/plenary.nvim.git',
+    'https://github.com/nvim-telescope/telescope.nvim.git'
 })
 
 require("plugins.lualine")
 require("plugins.mason")
 require("plugins.nvimcmp")
 require("plugins.vimlspconfig")
+require("plugins.telescope")
 
 -- vim visual multi keybinds
 vim.g.VM_maps = {

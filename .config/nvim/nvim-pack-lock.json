@@ -36,9 +36,25 @@
       "rev": "2795c26c916bb3c57dde308b82be51971fa92747",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim.git"
+    },
     "space-vim-dark": {
       "rev": "0ab698bd2a3959e3bed7691ac55ba4d8abefd143",
       "src": "https://github.com/liuchengxu/space-vim-dark.git"
+    },
+    "telescope-fzf-native.nvim": {
+      "rev": "b25b749b9db64d375d782094e2b9dce53ad53a40",
+      "src": "https://github.com/nvim-telescope/telescope-fzf-native.nvim.git"
+    },
+    "telescope.nvim": {
+      "rev": "7d324792b7943e4aa16ad007212e6acc6f9fe335",
+      "src": "https://github.com/nvim-telescope/telescope.nvim.git"
+    },
+    "vim-plug": {
+      "rev": "88e31471818e9a29a8a20a0ee61360cfd7bdc1cd",
+      "src": "https://github.com/junegunn/vim-plug.git"
     },
     "vim-visual-multi": {
       "rev": "a6975e7c1ee157615bbc80fc25e4392f71c344d4",

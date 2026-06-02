@@ -1,3 +1,11 @@
+vim.cmd([[
+call plug#begin()
+
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install' }
+
+call plug#end()
+]])
+
 -- imports
 -- require("config.options")
 require("config.keymaps")
