@@ -9,5 +9,11 @@ keymap:
       ctrl-alt-semicolon: rightalt-semicolon
       ctrl-alt-apostrophe: rightalt-apostrophe
 
+modmap:
+  - name: capsLock_fix
+    remap:
+      Capslock: control_L
+      F13: Capslock
+
 # a: b
 # pressing a will type b
