@@ -1,0 +1,13 @@
+keymap:
+  - name: altGr_fix
+    remap:
+      ctrl-alt-leftbrace: rightalt-leftbrace
+      ctrl-alt-rightbrace: rightalt-rightbrace
+      ctrl-alt-e: rightalt-e
+      ctrl-shift-alt-leftbrace: rightalt-shift-leftbrace
+      ctrl-shift-alt-rightbrace: rightalt-shift-rightbrace
+      ctrl-alt-semicolon: rightalt-semicolon
+      ctrl-alt-apostrophe: rightalt-apostrophe
+
+# a: b
+# pressing a will type b
