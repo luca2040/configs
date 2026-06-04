@@ -9,3 +9,6 @@ import = [
     "~/.config/alacritty/theme.toml"
 ]
 
+[mouse]
+hide_when_typing = true
+

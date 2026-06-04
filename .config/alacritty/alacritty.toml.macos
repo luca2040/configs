@@ -26,3 +26,6 @@ bindings = [
   { key = "F18", chars = "#" },
 ]
 
+[mouse]
+hide_when_typing = true
+
