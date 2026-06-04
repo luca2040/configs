@@ -36,6 +36,7 @@ local function format_buffer()
 	local ft = vim.bo[bufnr].filetype
 
 	if ft == "python" then
+		vim.cmd("w")
 		vim.cmd("silent !black %")
 		vim.cmd("edit!")
 		return
