@@ -29,6 +29,16 @@ vim.keymap.set("n", "<leader><S-Right>", "<cmd>vertical resize +5<CR>")
 vim.keymap.set("n", "<leader><S-Up>", "<cmd>resize -5<CR>")
 vim.keymap.set("n", "<leader><S-Down>", "<cmd>resize +5<CR>")
 
+vim.keymap.set("n", "dd", function()
+	local line = vim.api.nvim_get_current_line()
+
+	if line:match("^%s*$") then
+		vim.cmd('normal! "_dd')
+	else
+		vim.cmd("normal! dd")
+	end
+end)
+
 vim.keymap.set("i", "<F12>", "~")
 
 local function format_buffer()
