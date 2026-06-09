@@ -46,9 +46,11 @@ local function format_buffer()
 	local ft = vim.bo[bufnr].filetype
 
 	if ft == "python" then
-		vim.cmd("w")
+		local view = vim.fn.winsaveview()
+		vim.cmd("write")
 		vim.cmd("silent !black %")
 		vim.cmd("edit!")
+		vim.fn.winrestview(view)
 		return
 	end
 
