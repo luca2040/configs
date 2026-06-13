@@ -31,7 +31,7 @@ local lsps = {
 	{
 		"clangd",
 		{
-			cmd = { "clangd" },
+			cmd = { "clangd", "--header-insertion=never" },
 			filetypes = { "c", "cpp" },
 			root_markers = { ".git", "compile_commands.json" },
 		},
@@ -85,7 +85,25 @@ local lsps = {
 		},
 		capabilities = capabilities,
 	},
+	{
+		"zls",
+		{
+			cmd = { "zls" },
+			filetypes = { "zig", "zir" },
+			root_markers = { "zls.json", "build.zig", ".git" },
+			workspace_required = false,
+		},
+	},
 }
+
+-- ##########################################################################
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "python" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
 
 -- ##########################################################################
 
