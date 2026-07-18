@@ -1,0 +1,21 @@
+# yabai keybinds
+
+ctrl + alt - up : yabai -m window --grid 1:1:0:0:1:1
+ctrl + alt - down : yabai -m window --minimize
+
+shift + ctrl + alt - right : yabai -m window --space next; yabai -m space --focus next
+shift + ctrl + alt - left : yabai -m window --space prev; yabai -m space --focus prev
+
+ctrl + alt - right : yabai -m space --focus next
+ctrl + alt - left : yabai -m space --focus prev
+
+# additional yabai scripts from https://github.com/luca2040/yabaiUtils
+
+ctrl - right : yabai_grid l
+ctrl - left : yabai_grid h
+
+cmd + alt - w : yabai_pin w
+cmd + alt - s : yabai_pin s
+
+cmd + alt - 0x18 : yabai_opacity 0.1
+cmd + alt - 0x2C : yabai_opacity -0.1
