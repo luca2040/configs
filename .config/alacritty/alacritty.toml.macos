@@ -24,6 +24,7 @@ bindings = [
   { key = "F20", mods = "Shift", chars = "}" },
   { key = "F17", chars = "@" },
   { key = "F18", chars = "#" },
+  { key = "Return", mods = "Shift", chars = "\n" },
 ]
 
 [mouse]
