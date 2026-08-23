@@ -2,6 +2,8 @@ vim.cmd([[
 call plug#begin()
 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install' }
+Plug 'stevearc/conform.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 ]])
@@ -11,6 +13,13 @@ call plug#end()
 require("config.keymaps")
 require("config.theme")
 require("plugins")
+require("conform").setup({
+	formatters_by_ft = {
+		python = { "black" },
+		gdscript = { "gdformat" },
+	},
+})
+require("nvim-treesitter").install({ "python", "gdscript" })
 
 -- numbering and stuff
 -- vim.opt.clipboard="unnamedplus"

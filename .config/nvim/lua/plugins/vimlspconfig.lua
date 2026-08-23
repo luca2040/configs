@@ -58,6 +58,7 @@ local lsps = {
 						autoSearchPaths = true,
 						useLibraryCodeForTypes = true,
 						diagnosticMode = "openFilesOnly",
+						typeCheckingMode = "off",
 					},
 				},
 			},
@@ -94,12 +95,22 @@ local lsps = {
 			workspace_required = false,
 		},
 	},
+	{
+		"gdscript",
+		{
+			cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+			filetypes = { "gdscript" },
+			root_markers = { "project.godot", ".git" },
+			workspace_required = true,
+		},
+		capabilities = capabilities,
+	},
 }
 
 -- ##########################################################################
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "python" },
+	pattern = { "python", "gdscript" },
 	callback = function()
 		vim.treesitter.start()
 	end,

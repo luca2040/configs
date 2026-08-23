@@ -42,19 +42,7 @@ end)
 vim.keymap.set("i", "<F12>", "~")
 
 local function format_buffer()
-	local bufnr = vim.api.nvim_get_current_buf()
-	local ft = vim.bo[bufnr].filetype
-
-	if ft == "python" then
-		local view = vim.fn.winsaveview()
-		vim.cmd("write")
-		vim.cmd("silent !black %")
-		vim.cmd("edit!")
-		vim.fn.winrestview(view)
-		return
-	end
-
-	vim.lsp.buf.format()
+	require("conform").format({ bufnr = vim.api.nvim_get_current_buf(), lsp_fallback = true })
 end
 
 -- lsp stuff
